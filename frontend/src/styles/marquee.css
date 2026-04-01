@@ -1,0 +1,106 @@
+/* --- Marquee Section Container --- */
+.brands-section {
+    background: #f8fafc;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.overline {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--slate-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+}
+
+/* --- Animation Wrapper --- */
+.marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 0; /* Extra vertical space so logos don't clip when they grow */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 25s linear infinite; /* Adjusted speed for 150px logos */
+}
+
+/* --- Individual Brand Item (Logo + Text) --- */
+.brand-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    /* Centers logo and text horizontally */
+    justify-content: center;
+    width: 250px;           /* Fixed width ensures labels are spaced evenly */
+    gap: 15px;              /* Space between logo and text */
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Pop-out Effect on Hover */
+.brand-item:hover {
+    transform: scale(1.2) translateY(-15px); /* Grows by 20% and lifts up */
+    z-index: 10;
+}
+
+/* --- Logo Styling --- */
+.brand-logo-container {
+    height: 150px;          /* Matches your logo size */
+    width: 150px;           /* Matches your logo size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.5);
+    transition: all 0.4s ease;
+}
+
+/* Natural Color on Hover */
+.brand-item:hover .brand-logo {
+    filter: grayscale(0) opacity(1); /* Removes monochrome for natural colors */
+}
+
+/* --- Brand Label Styling --- */
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--slate-500);
+    text-align: center;     /* Forces text to stay centered under logo */
+    width: 100%;            /* Allows centering logic to work */
+    white-space: nowrap;    /* Prevents name from wrapping to a second line */
+    transition: color 0.3s ease;
+}
+
+/* --- Hover State --- */
+.brand-item:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+.brand-item:hover .brand-logo {
+    filter: grayscale(0) opacity(1);
+}
+
+.brand-item:hover .brand-name {
+    color: var(--slate-900); /* Darkens text on hover */
+}
+
+/* --- Keyframes --- */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

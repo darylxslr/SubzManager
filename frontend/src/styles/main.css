@@ -1,0 +1,236 @@
+/* --- Fonts & Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+    --blue: #2563eb;
+    --blue-hover: #1d4ed8;
+    --slate-900: #0f172a;
+    --slate-500: #64748b;
+    --bg-light: #f8fafc;
+    --border: #e2e8f0;
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--slate-900);
+    line-height: 1.5;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Navbar --- */
+.navbar {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between the box icon and text */
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--slate-900);
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 32px; /* Adjust this height to match your design scale */
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--slate-500);
+    margin: 0 1.25rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--blue-hover);
+}
+
+.btn-outline {
+    background: #f1f5f9;
+    color: var(--slate-900);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-text {
+    background: transparent;
+    color: var(--slate-900);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f9ff;
+    color: #0369a1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0f2fe;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+}
+
+.subtext {
+    color: var(--slate-500);
+    font-size: 1.25rem;
+    max-width: 750px;
+    margin: 0 auto 2.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.lock-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--slate-500);
+}
+
+/* --- Features Section --- */
+.features-header {
+    text-align: center;
+    padding: 80px 0 20px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-bottom: 100px;
+}
+
+.f-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.f-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+}
+
+.f-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #eff6ff;
+    color: var(--blue);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 3rem 0;
+    color: var(--slate-500);
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer .logo-img {
+    height: 28px;
+}

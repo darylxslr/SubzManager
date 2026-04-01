@@ -4,130 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SubManager | Take back control</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="container nav-flex">
-            <div class="logo">
-                <img src="/assets/submanager.png" alt="SubManager Logo" class="logo-img">
-                <span>SubManager</span>
+            <a href="#" class="logo">
+                <img src="/assets/subzmanager.png" alt="SubManager Logo" class="logo-img">
+                SubManager
+            </a>
+            <div class="nav-links">
+                <a href="#">Features</a>
+                <a href="#">How it Works</a>
+                <a href="#">Pricing</a>
+                <a href="#">FAQ</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">How it Works</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-            <div class="nav-btns">
+            <div class="nav-auth">
                 <button class="btn-text">Log In</button>
-                <button class="btn-primary btn-sm btn-connect">
-                    <i class="fab fa-google"></i> Connect Google
-                </button>
+                <button class="btn-primary">Connect Google</button>
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <div class="badge">
-                <span class="sparkle">✨</span> Stop paying for subscriptions you don't use
-            </div>
-            <h1>Take back control of your<br>recurring payments.</h1>
-            <p class="subtext">
-                Connect your Google account to automatically discover, track, and<br>
-                cancel subscriptions you no longer need. Save hundreds of dollars<br>
-                every year with zero effort.
-            </p>
+            <div class="badge">✨ Stop paying for subscriptions you don't use</div>
+            <h1>Take back control of your <br> recurring payments.</h1>
+            <p class="subtext">Connect your Google account to automatically discover, track, and cancel subscriptions you no longer need. Save hundreds of dollars every year with zero effort.</p>
             <div class="hero-actions">
-                <button class="btn-primary btn-lg btn-connect">
-                    <i class="fab fa-google"></i> Connect Google to Proceed
-                </button>
-                <button class="btn-outline btn-lg">See how it works</button>
+                <button class="btn-primary" style="padding: 1rem 2rem;">Connect Google to Proceed</button>
+                <button class="btn-outline" style="padding: 1rem 2rem;">See how it works</button>
             </div>
-            <p class="lock-text"><i class="fas fa-lock"></i> We only scan receipts. We never sell your data.</p>
+            <p class="lock-text">🔒 We only scan receipts. We never sell your data.</p>
         </div>
     </header>
 
     <section class="brands-section">
-    <div class="container">
-        <p class="overline">AUTOMATICALLY FINDS SUBSCRIPTIONS FROM</p>
-        
+        <p class="overline">Automatically finds subscriptions from</p>
         <div class="marquee-wrapper">
-            <div class="marquee-content">
-                
-                <span><img src="/assets/netflix.png" alt="Netflix" class="brand-logo">  </span>
-                <span><img src="/assets/spotify.png" alt="Spotify" class="brand-logo">  </span>
-                <span><img src="/assets/chatgpt.png" alt="ChatGPT" class="brand-logo"> </span>
-                <span><img src="/assets/amazon.png" alt="Amazon" class="brand-logo">  </span>
-                <span><img src="/assets/gemini.svg" alt="Gemini" class="brand-logo"> </span>
-
-                <span><img src="/assets/netflix.png" alt="Netflix" class="brand-logo">  </span>
-                <span><img src="/assets/spotify.png" alt="Spotify" class="brand-logo">  </span>
-                <span><img src="/assets/chatgpt.png" alt="ChatGPT" class="brand-logo"> </span>
-                <span><img src="/assets/amazon.png" alt="Amazon" class="brand-logo">  </span>
-                <span><img src="/assets/gemini.svg" alt="Gemini" class="brand-logo"> </span>
-
-            </div>
+            <div class="marquee-content"></div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <section class="features">
-        <div class="container">
+    <section class="container">
+        <div class="features-header">
             <h2>Everything you need to manage expenses</h2>
             <p class="subtext">SubManager gives you full visibility into your digital spending, helping you cut down costs in seconds.</p>
-            <div class="feature-grid">
-                <div class="f-card">
-                    <div class="f-icon"><i class="fas fa-search"></i></div>
-                    <h3>Auto-Discovery</h3>
-                    <p>We securely scan your inbox to find subscription receipts. You don't have to manually enter any data.</p>
-                </div>
-                <div class="f-card">
-                    <div class="f-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Usage Analytics</h3>
-                    <p>See exactly how much you're spending monthly and yearly. Highlights inactive apps so you know what to cut.</p>
-                </div>
-                <div class="f-card">
-                    <div class="f-icon"><i class="fas fa-times-circle"></i></div>
-                    <h3>1-Click Cancellation</h3>
-                    <p>Ready to let an app go? We provide direct cancellation links or handle the process for you instantly.</p>
-                </div>
-            </div>
         </div>
+        <div class="feature-grid"></div>
     </section>
-
-    <section class="final-cta">
-        <div class="container">
-            <h2>Ready to stop wasting money?</h2>
-            <p>Join thousands of users who have taken back control of their<br>
-               finances. It takes less than 30 seconds to get started.</p>
-            <button class="btn-primary btn-lg btn-connect">
-                <i class="fab fa-google"></i> Connect Google to Proceed
-            </button>
-        </div>
-    </section>
-
+    
     <footer class="footer">
-    <div class="container footer-flex">
-        <div class="logo-f">
-            <img src="/assets/submanager.png" alt="SubManager" class="footer-logo">
-            <span>SubManager</span>
+        <div class="container footer-flex">
+            <a href="#" class="logo">
+                <img src="/assets/subzmanager.png" alt="SubManager Logo" class="logo-img">
+                SubManager
+            </a>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+            <div>© 2026 SubManager. All rights reserved.</div>
         </div>
-        
-        <div class="f-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Support</a>
-        </div>
-        
-        <div class="copy">© 2025 SubManager. All rights reserved.</div>
-    </div>
     </footer>
 
-    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
