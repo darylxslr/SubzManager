@@ -1,0 +1,2 @@
+# SubzManager
+Unsubscribed unused subscriptions.
