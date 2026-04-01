@@ -1,0 +1,361 @@
+/* ==========================================================================
+   1. ROOT VARIABLES & GLOBAL RESET
+   ========================================================================== */
+:root {
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --slate-900: #0f172a;
+    --slate-500: #64748b;
+    --slate-100: #f1f5f9;
+    --border: #e2e8f0;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    color: var(--slate-900); 
+    background: #fff; 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 2rem; 
+}
+
+
+/* ==========================================================================
+   2. NAVBAR & LOGO
+   ========================================================================== */
+.navbar { 
+    padding: 1.5rem 0; 
+    border-bottom: 1px solid var(--border); 
+}
+
+.nav-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    font-weight: 800; 
+    font-size: 1.25rem; 
+}
+
+.logo-img {
+    height: 32px; 
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-blue { 
+    color: var(--blue); 
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 2rem; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--slate-500); 
+    font-weight: 500; 
+}
+
+
+/* ==========================================================================
+   3. BUTTONS
+   ========================================================================== */
+.btn-primary { 
+    background: var(--blue); 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: 0.2s; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+}
+
+.btn-primary:hover { 
+    background: var(--blue-dark); 
+}
+
+.btn-sm { 
+    padding: 0.6rem 1.2rem; 
+    font-size: 0.9rem; 
+}
+
+.btn-lg { 
+    padding: 1rem 2rem; 
+    font-size: 1rem; 
+}
+
+.btn-outline { 
+    background: white; 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    padding: 1rem 2rem; 
+    font-weight: 600; 
+    cursor: pointer; 
+}
+
+.btn-text { 
+    background: transparent; 
+    border: none; 
+    font-weight: 600; 
+    cursor: pointer; 
+    padding: 0 1rem; 
+}
+
+
+/* ==========================================================================
+   4. TYPOGRAPHY & SECTIONS
+   ========================================================================== */
+.hero, .features, .final-cta { 
+    text-align: center; 
+    padding: 100px 0; 
+}
+
+h1 { 
+    font-size: 4.5rem; 
+    font-weight: 800; 
+    line-height: 1.1; 
+    letter-spacing: -2px; 
+    margin-bottom: 1.5rem; 
+}
+
+h2 { 
+    font-size: 3rem; 
+    font-weight: 800; 
+    letter-spacing: -1px; 
+    margin-bottom: 1rem; 
+}
+
+.subtext { 
+    color: var(--slate-500); 
+    font-size: 1.2rem; 
+    margin-bottom: 2rem; 
+}
+
+.badge { 
+    display: inline-block; 
+    background: #eff6ff; 
+    color: #1e40af; 
+    padding: 0.5rem 1rem; 
+    border-radius: 99px; 
+    border: 1px solid #dbeafe; 
+    font-weight: 600; 
+    font-size: 0.85rem; 
+    margin-bottom: 2rem; 
+}
+
+.hero-actions { 
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+.lock-text { 
+    font-size: 0.85rem; 
+    color: var(--slate-500); 
+    margin-top: 1.5rem; 
+}
+
+
+/* ==========================================================================
+   5. BRANDS & MARQUEE ANIMATION
+   ========================================================================== */
+.brands-section {
+    background-color: #f1f5f9; 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.overline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #64748b; 
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 0;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    align-items: flex-end; 
+    animation: marquee 12s linear infinite; 
+    animation-play-state: running !important; 
+}
+
+/* MARQUEE BRAND ITEMS */
+.marquee-content span {
+    /* ... your existing code ... */
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* THE HOVER EFFECT */
+.marquee-content span:hover {
+    background-color: rgba(37, 99, 235, 0.05); /* Very faint blue highlight */
+    transform: scale(1.1); /* Makes the logo and text slightly bigger */
+}
+
+.marquee-content span:hover .brand-name {
+    color: var(--blue); /* Changes text color to blue on hover */
+}
+
+.brand-logo {
+    height: 35px;           
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.marquee-content i {
+    margin-right: 12px;
+}
+
+/* Hover States for Animation */
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: running; 
+}
+
+.marquee-content span:hover .brand-logo {
+    transform: scale(1.1);
+}
+
+/* Redundant property preserved from your code */
+.brand-logo {
+    height: 150px; 
+    width: auto; 
+    object-fit: contain;
+}
+
+/* Redundant pause rule preserved from your code */
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/* ==========================================================================
+   6. FEATURE CARDS
+   ========================================================================== */
+.feature-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin-top: 4rem; 
+}
+
+/* FEATURE CARDS - Add these properties to your existing .f-card class */
+.f-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: left;
+    
+    /* ADD THESE FOR SMOOTH TRANSITION */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* THE HOVER EFFECT */
+.f-card:hover {
+    transform: translateY(-8px); /* Lifts the card up */
+    background-color: #ffffff;    /* Keeps it white or change to very light blue #f8fafc */
+    border-color: var(--blue);    /* Changes border to your theme blue */
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1); /* Adds a professional shadow */
+}
+
+/* Optional: Highlight the icon inside the card when the card is hovered */
+.f-card:hover .f-icon {
+    background: var(--blue);
+    color: white;
+}
+
+.f-icon { 
+    width: 48px; 
+    height: 48px; 
+    background: #eff6ff; 
+    color: var(--blue); 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 1.5rem; 
+    font-size: 1.2rem; 
+}
+
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+.final-cta { 
+    border-top: 1px solid var(--border); 
+}
+
+.final-cta h2 { 
+    font-size: 3.5rem; 
+}
+
+.final-cta p { 
+    margin-bottom: 3rem; 
+}
+
+.footer { 
+    padding: 4rem 0; 
+    border-top: 1px solid var(--border); 
+    color: var(--slate-500); 
+    font-size: 0.9rem; 
+}
+
+.footer-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.footer-logo {
+    height: 24px;       
+    width: auto;        
+    object-fit: contain;
+    margin-right: 10px; 
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.f-links a { 
+    margin: 0 1rem; 
+    text-decoration: none; 
+    color: inherit; 
+}
